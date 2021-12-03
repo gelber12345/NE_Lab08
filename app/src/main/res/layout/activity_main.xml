@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    <variable
+        name="viewModel"
+        type="com.ne.ne_lab08.viewmodel.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MainActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="35dp"
+                android:textColor="#ffffff"
+                android:text="Menu Principal"
+                android:textAlignment="center"
+                android:background="#536dfe"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/textGuiaPersonal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="@string/guia_personal"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_below="@+id/textMenu"/>
+
+            <Button
+                android:id="@+id/btnPersonal"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/textGuiaPersonal"
+                android:text="Ir a Gestionar Personal"
+                android:textSize="15dp"
+                android:textAllCaps="false"
+                android:onClick="@{()->viewModel.goToPersonal(0)}"
+                android:textColor="#ffffff" />
+            <TextView
+                android:id="@+id/textGuiaCargo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="@string/guia_cargo"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_below="@+id/btnPersonal"/>
+            <Button
+                android:id="@+id/btnCargos"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/textGuiaCargo"
+                android:text="Ir a Gestionar Cargos"
+                android:textSize="15dp"
+                android:textAllCaps="false"
+                android:onClick="@{()->viewModel.goToPersonal2(1)}"
+                android:textColor="#ffffff" />
+            <TextView
+                android:id="@+id/textGuiaPais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="@string/guia_paises"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_below="@+id/btnCargos"/>
+            <Button
+                android:id="@+id/btnPaises"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/textGuiaPais"
+                android:text="Ir a Gestionar Paises"
+                android:textSize="15dp"
+                android:textAllCaps="false"
+                android:onClick="@{()->viewModel.goToPersonal3(2)}"
+                android:textColor="#ffffff" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

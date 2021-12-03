@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.ne.ne_lab08.viewmodel.personal.MainPersonalViewModel" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.personal.MainPersonal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/lineMainPersonal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/Regresar"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="Atras"
+                        android:background="#536dfe"
+                        android:textSize="10dp"
+                        android:onClick="@{()->viewModel.back(-2)}"
+                        />
+                    <TextView
+                        android:id="@+id/txtMainPersonal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="35dp"
+                        android:textColor="#ffffff"
+                        android:text="Menu Personal"
+                        android:textAlignment="center"
+                        android:background="#536dfe"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnLineMainPersonal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/lineMainPersonal">
+
+                    <TextView
+                        android:id="@+id/textGuiaAdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text="@string/guia_add"
+                        />
+                    <Button
+                        android:id="@+id/btnMainPersonalAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="100dp"
+                        android:text="Añadir"
+                        android:onClick="@{()->viewModel.goToControl(-1)}"
+                        />
+                    <TextView
+                        android:id="@+id/textGuiaOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text="@string/guia_order"
+                        android:layout_marginTop="20dp"
+
+                        />
+                    <Button
+                        android:id="@+id/btnMainPersonalOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="100dp"
+                        android:text="Ordenar"
+                        android:onClick="@{()->viewModel.ordenar()}"
+                        />
+                    <TextView
+                        android:id="@+id/textGuiaLista"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:text="@string/guia_lista"
+                        android:layout_marginTop="20dp"
+
+                        />
+                </LinearLayout>
+
+
+                <SearchView
+                    android:id="@+id/buscarMainPersonal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnLineMainPersonal" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listaPersonal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:layout_below="@+id/buscarMainPersonal">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</layout>

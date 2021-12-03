@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/drawable/plus_circle.xml" value="0.18611111111111112" />
+        <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/activity_control_cargos.xml" value="0.22" />
+        <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/activity_control_paises.xml" value="0.20416666666666666" />
+        <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/activity_control_personal.xml" value="0.25" />
+        <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/activity_main_cargos.xml" value="0.10416666666666667" />
+        <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/activity_main_paises.xml" value="0.20416666666666666" />
+        <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/activity_main_personal.xml" value="0.22" />
+        <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/lista_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/lista_item_aux.xml" value="0.22" />
+        <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/lista_item_pais.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

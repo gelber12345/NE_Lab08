@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">NE_Lab08</string>
+    <string name="fallo_database">Error en la accion con la Base de Datos</string>
+
+    <!-- PERSONAL -->
+    <string name="guia_personal">Al presionar el siguiente boton se redireccionara a una vista para gestionar
+                                 el contenido de la tabla Personal </string>
+    <string name="guia_cargo">Al presionar el siguiente boton se redireccionara a una vista para gestionar
+                                 el contenido de la tabla Cargos </string>
+    <string name="guia_paises">Al presionar el siguiente boton se redireccionara a una vista para gestionar
+                                 el contenido de la tabla Paises </string>
+    <string name="guia_control">A continuacion el listado del significado de los botonos: <br />
+                                -Actualizar .- Actualizara el registro con los datos ingresados en el formulario<br />
+                                -Eliminar .- Eliminara el registro seleccionado<br />
+                                -Activar .- Activara el estado del registro<br />
+                                -Inactivar .- Inactivara el estado del registro<br />
+                                -Cancelar .- Cancelara la edicion y regresara ala pestaña principal</string>
+    <string name="guia_add">El siguiente boton servira para poder añadir un registro a la base de datos </string>
+    <string name="guia_order">El siguiente boton servira para poder ordenar la lista de elementos en base a su Codigo </string>
+    <string name="guia_lista">Para poder editar un registro haga "click" en un registro mostrado en la lista, para poder buscar un registro, puede utilizar la "lupa" que se encuentra encima de la lista</string>
+    <string name="dni_invalido">DNI invalido</string>
+    <string name="nombre_vacio">Nombre invalido</string>
+
+    <string name="registrado">Registro Guardado</string>
+    <string name="editado">Registro Editado</string>
+    <string name="activado">Registro Activado</string>
+    <string name="inactivado">Registro Inactivado</string>
+    <string name="eliminado">Registro Eliminado</string>
+    <string name="cancelar">Accion cancelada</string>
+
+    <string name="fechaEdit">Fecha editar</string>
+    <string name="fecha_invalida">Fecha invalida</string>
+</resources>

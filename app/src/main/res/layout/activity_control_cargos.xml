@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.ne.ne_lab08.viewmodel.cargos.ControlCargosViewModel" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            tools:context=".ui.cargos.ControlCargos">
+
+
+            <TextView
+                android:id="@+id/txtTituloControlCargos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Editar Cargo"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:background="#5E7FF7"/>
+
+            <LinearLayout
+                android:id="@+id/formularioControlCargos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTituloControlCargos"
+                android:layout_marginTop="-42dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="50dp">
+
+                <TextView
+                    android:id="@+id/txtNombreControlCargos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre:" />
+
+                <EditText
+                    android:id="@+id/etNombreControlCargos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="48dp"
+                    android:text="@={viewModel.nombre}"
+                    android:minHeight="48dp" />
+
+
+
+                <TextView
+                    android:id="@+id/txtEstadoControlCargos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estado:" />
+
+                <TextView
+                    android:id="@+id/txtValorEstadoControlCargos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="48dp"
+                    android:text="@={viewModel.estado}"
+                    android:minHeight="48dp" />
+                <Button
+                    android:id="@+id/btnAddControlCargos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:onClick="@{()->viewModel.addCargo()}"
+                    android:text="Añadir" />
+                <LinearLayout
+                    android:id="@+id/lin1ControlCargos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+                    <Button
+                        android:id="@+id/btnEditarControlCargos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitCenter"
+                        android:onClick="@{()->viewModel.editarCargo()}"
+                        android:text="Actualizar" />
+
+                    <Button
+                        android:id="@+id/btnEliminarControlCargos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="10dp"
+                        android:onClick="@{()->viewModel.eliminarCargo()}"
+                        android:scaleType="fitCenter"
+                        android:text="ELIMINAR" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lin2ControlCargos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="3">
+
+                    <Button
+                        android:id="@+id/btnActivarControlCargos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitCenter"
+                        android:onClick="@{()->viewModel.activarCargo()}"
+                        android:text="ACTIVAR" />
+
+                    <Button
+                        android:id="@+id/btnInacControlCargos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+                        android:onClick="@{()->viewModel.inactivarCargo()}"
+                        android:scaleType="fitCenter"
+                        android:text="Inactivar" />
+
+
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btnCancelarControlCargos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:onClick="@{()->viewModel.cancelar()}"
+                    android:text="Cancelar" />
+                <TextView
+                    android:id="@+id/textGuiaControl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+
+                    android:text="@string/guia_control"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+</layout>
