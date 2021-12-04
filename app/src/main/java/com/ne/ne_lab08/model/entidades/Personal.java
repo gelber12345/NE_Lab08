@@ -1,5 +1,7 @@
 package com.ne.ne_lab08.model.entidades;
 
+import com.ne.ne_lab08.model.DbCargos;
+
 public class Personal {
     private int id;
     private String nombre;
@@ -8,6 +10,8 @@ public class Personal {
     private int mes;
     private int year;
     private String estado;
+    private int id_cargo;
+    private int id_pais;
 
     public int getId() {
         return id;
@@ -76,6 +80,23 @@ public class Personal {
         String res= ""+ dia +"/"+mes+"/"+year;
         return res;
     }
+
+    public int getId_cargo() {
+        return id_cargo;
+    }
+
+    public void setId_cargo(int id_cargo) {
+        this.id_cargo = id_cargo;
+    }
+
+    public int getId_pais() {
+        return id_pais;
+    }
+
+    public void setId_pais(int id_pais) {
+        this.id_pais = id_pais;
+    }
+
     public String getDiaString(){
         return "" + dia;
     }
@@ -88,4 +109,12 @@ public class Personal {
     public String getIdString(){
         return "" + id;
     }
+    public String getIdCargo(){
+        return "" + id_cargo;
+    }
+    public String getIdPais(){
+        return "" + id_pais;
+    }
+
+
 }

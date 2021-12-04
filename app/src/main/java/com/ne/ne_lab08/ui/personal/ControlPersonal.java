@@ -9,7 +9,9 @@ import android.view.View;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.ne.ne_lab08.Event;
@@ -23,6 +25,7 @@ import java.util.Calendar;
 public class ControlPersonal extends AppCompatActivity {
     private ActivityControlPersonalBinding mBinding;
     private ControlPersonalViewModel mViewModel;
+    Spinner spPaises,spCargos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,12 +33,22 @@ public class ControlPersonal extends AppCompatActivity {
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_control_personal);
         mViewModel = new ViewModelProvider(this).get(ControlPersonalViewModel.class);
         mViewModel.setContext(this);
+        spPaises = findViewById(R.id.spPaises);
+        spCargos = findViewById(R.id.spCargos);
+
         mBinding.setViewModel(mViewModel);
         mBinding.setLifecycleOwner(this);
         setupComponents();
         setupNavigation();
     }
     private void setupComponents(){
+        mViewModel.inicializarSpinner(spCargos,spPaises);
+        ArrayAdapter<String> adaptarCargos = new ArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item,mViewModel.getCargos());
+        ArrayAdapter<String> adaptarPaises = new ArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item,mViewModel.getPaises());
+
+        spCargos.setAdapter(adaptarCargos);
+        spPaises.setAdapter(adaptarPaises);
+
         if (isEdition() ){
             TextView textView = findViewById(R.id.txtTituloControlPersonal);
             textView.setText("Añadir Personal");

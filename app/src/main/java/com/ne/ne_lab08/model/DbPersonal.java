@@ -19,7 +19,7 @@ public class DbPersonal extends DbHelper{
         super(context);
         this.context = context;
     }
-    public boolean insertarPersonal(String nombre, String dni,int dia,int mes,int year) {
+    public boolean insertarPersonal(String nombre, String dni,int dia,int mes,int year,int id_cargo,int id_pais) {
 
         boolean correcto = false;
 
@@ -33,6 +33,8 @@ public class DbPersonal extends DbHelper{
             values.put("dia", dia);
             values.put("mes", mes);
             values.put("year", year);
+            values.put("id_cargo", id_cargo);
+            values.put("id_pais", id_pais);
             db.insert(TABLE_PERSONAL, null, values);
             correcto= true;
         } catch (Exception ex) {
@@ -62,7 +64,9 @@ public class DbPersonal extends DbHelper{
                 personal.setDia(cursorPersonal.getString(3));
                 personal.setMes(cursorPersonal.getString(4));
                 personal.setYear(cursorPersonal.getString(5));
-                personal.setEstado(cursorPersonal.getString(6));
+                personal.setId_cargo(cursorPersonal.getInt(6));
+                personal.setId_pais(cursorPersonal.getInt(7));
+                personal.setEstado(cursorPersonal.getString(8));
                 listaPersonal.add(personal);
             } while (cursorPersonal.moveToNext());
         }
@@ -90,14 +94,16 @@ public class DbPersonal extends DbHelper{
             personal.setDia(cursorPersonal.getString(3));
             personal.setMes(cursorPersonal.getString(4));
             personal.setYear(cursorPersonal.getString(5));
-            personal.setEstado(cursorPersonal.getString(6));
+            personal.setId_cargo(cursorPersonal.getInt(6));
+            personal.setId_pais(cursorPersonal.getInt(7));
+            personal.setEstado(cursorPersonal.getString(8));
         }
 
         cursorPersonal.close();
 
         return personal;
     }
-    public boolean editarPersonal(int id, String nombre, String dni,int dia,int mes,int year) {
+    public boolean editarPersonal(int id, String nombre, String dni,int dia,int mes,int year,int id_cargo,int id_pais) {
 
         boolean correcto = false;
 
@@ -105,7 +111,7 @@ public class DbPersonal extends DbHelper{
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
         try {
-            db.execSQL("UPDATE " + TABLE_PERSONAL + " SET nombre = '" + nombre + "', dni = '" + dni+ "', dia = '"+ dia +"', mes = '"+ mes +"' , year = '"+ year +"' WHERE id='" + id + "' ");
+            db.execSQL("UPDATE " + TABLE_PERSONAL + " SET nombre = '" + nombre + "', dni = '" + dni+ "', dia = '"+ dia +"', mes = '"+ mes +"' , year = '"+ year +"' , id_cargo = '"+ id_cargo +"' , id_pais = '"+ id_pais +"' WHERE id='" + id + "' ");
             correcto = true;
         } catch (Exception ex) {
             Log.d("Erorrrrrrr: ", ex.toString() );

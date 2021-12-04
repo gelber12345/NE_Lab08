@@ -7,6 +7,8 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 import com.ne.ne_lab08.databinding.ListaItemBinding;
+import com.ne.ne_lab08.model.DbCargos;
+import com.ne.ne_lab08.model.DbPaises;
 import com.ne.ne_lab08.model.entidades.Personal;
 import com.ne.ne_lab08.viewmodel.personal.MainPersonalViewModel;
 import com.ne.ne_lab08.R;
@@ -51,6 +53,8 @@ public class PersonalAdapter extends RecyclerView.Adapter<PersonalAdapter.Person
     }
 
     public void filtrado(final String txtBuscar) {
+        final DbCargos dbCargo = new DbCargos(mViewModel.getContext());
+        final DbPaises dbPais= new DbPaises(mViewModel.getContext());
         int longitud = txtBuscar.length();
         if (longitud == 0) {
             listPersonal.clear();
@@ -62,7 +66,9 @@ public class PersonalAdapter extends RecyclerView.Adapter<PersonalAdapter.Person
                                 || i.getDni().toLowerCase().contains(txtBuscar.toLowerCase())
                                 || i.getFecha().toLowerCase().contains(txtBuscar.toLowerCase())
                                 || i.getEstado().toLowerCase().contains(txtBuscar.toLowerCase())
-                                || i.getIdString().toLowerCase().contains(txtBuscar.toLowerCase()))
+                                || i.getIdString().toLowerCase().contains(txtBuscar.toLowerCase())
+                                || dbCargo.verCargo(i.getId_cargo()).getNombre().toLowerCase().contains(txtBuscar.toLowerCase())
+                                || dbPais.verPais(i.getId_pais()).getNombre().toLowerCase().contains(txtBuscar.toLowerCase()))
                         .collect(Collectors.toList());
                 listPersonal.clear();
                 listPersonal.addAll(collecion);
@@ -72,7 +78,9 @@ public class PersonalAdapter extends RecyclerView.Adapter<PersonalAdapter.Person
                             || c.getDni().toLowerCase().contains(txtBuscar.toLowerCase())
                             || c.getFecha().toLowerCase().contains(txtBuscar.toLowerCase())
                             || c.getEstado().toLowerCase().contains(txtBuscar.toLowerCase())
-                            || c.getIdString().toLowerCase().contains(txtBuscar.toLowerCase())) {
+                            || c.getIdString().toLowerCase().contains(txtBuscar.toLowerCase())
+                            || dbCargo.verCargo(c.getId_cargo()).getNombre().toLowerCase().contains(txtBuscar.toLowerCase())
+                            || dbPais.verPais(c.getId_pais()).getNombre().toLowerCase().contains(txtBuscar.toLowerCase())){
                         listPersonal.add(c);
                     }
                 }

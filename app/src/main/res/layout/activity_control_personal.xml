@@ -127,6 +127,26 @@
                     android:minWidth="48dp"
                     android:text="@={viewModel.estado}"
                     android:minHeight="48dp" />
+                <TextView
+                    android:id="@+id/txtCargoControlPersonal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cargo:" />
+                <Spinner
+                    android:id="@+id/spCargos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txtPaisControlPersonal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pais:" />
+                <Spinner
+                    android:id="@+id/spPaises"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:value=""/>
                 <Button
                     android:id="@+id/btnAddControlPersonal"
                     android:layout_width="wrap_content"

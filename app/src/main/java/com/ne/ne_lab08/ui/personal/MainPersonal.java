@@ -38,6 +38,8 @@ public class MainPersonal extends AppCompatActivity {
         mViewModel = new ViewModelProvider(this).get(MainPersonalViewModel.class);
         mBinding.setViewModel(mViewModel);
         mBinding.setLifecycleOwner(this);
+        mViewModel.setContext(this);
+
         sv = findViewById(R.id.buscarMainPersonal);
          dbHelper = new DbPersonal (this);
         rview = findViewById(R.id.listaPersonal);

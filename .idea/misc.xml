@@ -5,8 +5,8 @@
       <map>
         <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/drawable/plus_circle.xml" value="0.18611111111111112" />
         <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/activity_control_cargos.xml" value="0.22" />
-        <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/activity_control_paises.xml" value="0.20416666666666666" />
-        <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/activity_control_personal.xml" value="0.25" />
+        <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/activity_control_paises.xml" value="0.22" />
+        <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/activity_control_personal.xml" value="0.1" />
         <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/activity_main_cargos.xml" value="0.10416666666666667" />
         <entry key="..\:/Cuarto/B/IDNP/Lab/NE_Lab08/app/src/main/res/layout/activity_main_paises.xml" value="0.20416666666666666" />
@@ -26,7 +26,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.22" />
+        <option name="scale" value="0.20416666666666666" />
       </ProjectState>
     </option>
   </component>

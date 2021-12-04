@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NE_Lab08</string>
+    <string name="app_name">NE_Lab08-Gestion Tabla Maestro Personal</string>
     <string name="fallo_database">Error en la accion con la Base de Datos</string>
 
     <!-- PERSONAL -->
@@ -9,11 +9,11 @@
                                  el contenido de la tabla Cargos </string>
     <string name="guia_paises">Al presionar el siguiente boton se redireccionara a una vista para gestionar
                                  el contenido de la tabla Paises </string>
-    <string name="guia_control">A continuacion el listado del significado de los botonos: <br />
-                                -Actualizar .- Actualizara el registro con los datos ingresados en el formulario<br />
-                                -Eliminar .- Eliminara el registro seleccionado<br />
-                                -Activar .- Activara el estado del registro<br />
-                                -Inactivar .- Inactivara el estado del registro<br />
+    <string name="guia_control">A continuacion el listado del significado de los botonos: \n
+                                -Actualizar .- Actualizara el registro con los datos ingresados en el formulario\n
+                                -Eliminar .- Eliminara el registro seleccionado\n
+                                -Activar .- Activara el estado del registro\n
+                                -Inactivar .- Inactivara el estado del registro\n
                                 -Cancelar .- Cancelara la edicion y regresara ala pestaña principal</string>
     <string name="guia_add">El siguiente boton servira para poder añadir un registro a la base de datos </string>
     <string name="guia_order">El siguiente boton servira para poder ordenar la lista de elementos en base a su Codigo </string>
